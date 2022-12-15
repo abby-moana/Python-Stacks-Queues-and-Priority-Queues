@@ -20,4 +20,10 @@ class Queue:
     def dequeue(self):
         return self._elements.popleft()
 
+
 class PriorityQueue:
+
+    def __int__(self):
+        self.elements = []
+
+    def enqueue_with_priority(self, priority, value):
