@@ -63,5 +63,7 @@ class Worker(multiprocessing.Process):
     def run(self):
         while True:
             job = self.queue_in.get()
-
+            if plaintext := job(self.hash_value):
+                self.queue_out.put(plaintext)
+                break
 
