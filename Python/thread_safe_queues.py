@@ -59,3 +59,8 @@ class Worker(threading.Thread):
         self.product = None
         self.working = False
         self.progress = 0
+
+
+    @property
+    def state(self):
+
