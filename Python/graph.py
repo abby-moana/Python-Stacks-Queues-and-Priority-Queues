@@ -36,8 +36,8 @@ def load_graph(filename, node_factory):
 def breadth_first_traverse(graph, source):
     queue = Queue(source)
     visited = {source}
-    while queue:
-        yield (node := queue.dequeue())
+    for node in queue:
+        yield node
         for neighbor in graph.neighbors(node):
             if neighbor not in visited:
                 visited.add(neighbor)
