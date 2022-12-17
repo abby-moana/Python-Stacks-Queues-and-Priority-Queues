@@ -7,7 +7,7 @@ from itertools import zip_longest
 from rich.align import Align
 from rich.columns import Columns
 from rich.console import Group
-
+from rich.live import live
 
 
 QUEUE_TYPES = {
