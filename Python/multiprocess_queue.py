@@ -21,3 +21,8 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
+def chunk_indices(length, num_chunks):
+    start = 0
+
