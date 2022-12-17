@@ -98,3 +98,5 @@ def depth_first_traverse(graph, source, order_by=None):
             neighbors = list(graph.neighbors(node))
             if order_by:
                 neighbors.sort(key=order_by)
+            for neighbor in reversed(neighbors):
+                stack.enqueue(neighbor)
