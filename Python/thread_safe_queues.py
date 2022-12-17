@@ -125,3 +125,7 @@ class View:
             rows.append(Columns([left_panel, right_panel], width=40))
         return Group(*rows)
 
+
+def panel(self, worker, title):
+    if worker is None:
+        return ""
