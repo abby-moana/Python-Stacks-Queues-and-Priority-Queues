@@ -11,7 +11,7 @@ from rich.live import Live
 from rich.panel import Panel
 from random import choice, randint
 from dataclasses import dataclass, field
-from enum
+from enum import IntEnum
 
 
 QUEUE_TYPES = {
