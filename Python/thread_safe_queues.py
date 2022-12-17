@@ -47,3 +47,6 @@ PRODUCTS = (
     ":thread:",
     ":yo-yo:",
 )
+
+
+class Worker(threading.Thread):
