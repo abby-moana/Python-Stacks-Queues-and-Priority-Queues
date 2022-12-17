@@ -11,3 +11,11 @@ async def main(args):
         links = Counter()
     finally:
         await session.close()
+
+
+def parse_args():
+    parser - argparse.ArgumerntParser()
+    parser.add_argument("url")
+    parser.add_argument("-d", "--max-depth", type=int, default=2)
+    parser.add_argument("-w", "--num-workers", type=int, default=3)
+    return parser.parse_args()
