@@ -6,3 +6,4 @@ with redis.Redis() as client:
     for message in pubsub.listen():
         if message["type"] == "message":
             body = message["data"].decode("utf-8")
+            print(f"Got message: {body}")
