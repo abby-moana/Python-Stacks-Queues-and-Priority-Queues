@@ -85,3 +85,6 @@ class Worker(threading.Thread):
         for _ in range(100):
             sleep(delay / 100)
             self.progress +=1
+
+
+class View:
