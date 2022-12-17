@@ -99,3 +99,10 @@ class View:
         ) as live:
             while True:
                 live.update(self.render())
+
+    def render(self):
+
+        match self.buffer:
+            case PriorityQueue():
+                title = "Priority Queue"
+                products = map(str, reversed(list(self.buffer.queue)))
