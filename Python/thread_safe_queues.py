@@ -106,3 +106,15 @@ class View:
             case PriorityQueue():
                 title = "Priority Queue"
                 products = map(str, reversed(list(self.buffer.queue)))
+            case LifoQueue():
+                title = "Stack"
+                products = list(self.buffer.queue)
+            case Queue():
+                title = "Queue"
+                products = reversed(list(self.buffer.queue))
+            case _:
+                title = products = ""
+
+        rows = [
+            Panel(f"[bold]{title}:[/] {', '.join(products)}", width=82)
+        ]
