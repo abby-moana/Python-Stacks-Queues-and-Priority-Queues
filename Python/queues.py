@@ -61,12 +61,15 @@ class MutableMinHeap(IterableMixin):
         self._counter = count()
 
     def __setitem__(self, unique_value, priority):
-        if unique_value in self.__elements_by_value:
-            self.__elements_by_value[unique_value].priority = priority
+        if unique_value in self._elements_by_value:
+            self._elements_by_value[unique_value].priority = priority
             heapify(self._elements)
         else:
             element = Element(priority, next(self._counter), unique_value)
-            self.__elements_by_value[unique_value] = element
+            self._elements_by_value[unique_value] = element
             heappush(self._elements, element)
+
+    def __getitem__(self, unique_value):
+        return self._elements_by_value[unique_value].priority
 
 
