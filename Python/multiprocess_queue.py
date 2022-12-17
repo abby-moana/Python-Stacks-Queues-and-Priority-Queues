@@ -60,5 +60,6 @@ class Worker(multiprocessing.Process):
         self.queue_out = queue_out
         self.hash_value = hash_value
 
-    def ri
+    def run(self):
+
 
