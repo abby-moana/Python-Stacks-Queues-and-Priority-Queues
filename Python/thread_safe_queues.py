@@ -144,3 +144,7 @@ class Producer(Worker):
 
     def run(self):
         while True:
+            self.product = choice(self.products)
+            self.simulate_work()
+            self.buffer.put(self.product)
+            self.simulate_idle()
