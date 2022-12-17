@@ -38,4 +38,7 @@ class Combinations:
         self.alphabet = alphabet
         self.length = length
 
+    def __len__(self):
+        return len(self.alphabet) ** self.length
+
 
