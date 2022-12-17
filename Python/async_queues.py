@@ -8,6 +8,8 @@ from urllib.parse import urljoin
 from bs4 import BeautifulSoup
 
 import sys
+from typing import NamedTuple
+
 
 async def main(args):
     session = aiohttp.ClientSession()
