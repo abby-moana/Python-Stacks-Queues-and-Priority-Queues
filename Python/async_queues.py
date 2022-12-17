@@ -31,6 +31,10 @@ async def main(args):
         await queue.put(Job(args.url))
         await queue.join()
 
+        for task in tasks:
+            task.cancel()
+
+        await
     finally:
         await session.close()
 
