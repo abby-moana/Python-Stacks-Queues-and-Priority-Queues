@@ -96,3 +96,5 @@ def depth_first_traverse(graph, source, order_by=None):
             yield node
             visited.add(node)
             neighbors = list(graph.neighbors(node))
+            if order_by:
+                neighbors.sort(key=order_by)
