@@ -4,6 +4,7 @@ from queues import Queue
 from collections import deque
 from queues import Queue, Stack
 from math import inf as infinity
+from queues import MutableMinHeap, Queue, Stack
 
 
 class City(NamedTuple):
