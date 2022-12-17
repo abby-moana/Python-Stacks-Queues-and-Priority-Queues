@@ -107,6 +107,8 @@ def main(args):
 
     while any(worker.is_alive() for worker in workers):
         try:
+            solution =  queue_out.get(timeout=0.1)
+
 
 
 def parse_args():
