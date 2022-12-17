@@ -1,6 +1,7 @@
 from typing import NamedTuple
 import network as nx
 from queues import Queue
+from collections import deque
 
 
 class City(NamedTuple):
@@ -66,3 +67,5 @@ def shortest_path(graph, source, destination, order_by=None):
                 previous[neighbor] = node
                 if neighbor == destination:
                     return retrace(previous, source, destination)
+
+
