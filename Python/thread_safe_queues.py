@@ -135,3 +135,10 @@ def panel(self, worker, title):
         padding + worker.state, align="left", vertical="middle"
     )
     return Panel(align, height=5, title=title)
+
+
+class Producer(Worker):
+    def __init__(self, speed, buffer, products):
+        super().__init__(speed, buffer)
+        self.products = products
+
