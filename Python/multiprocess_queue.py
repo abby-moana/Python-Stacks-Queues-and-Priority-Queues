@@ -4,6 +4,7 @@ from itertools import product
 from string import ascii_lowercase
 import multiprocessing
 from dataclasses import dataclass
+import argparse
 
 
 def reverse_md5(hash_value, alphabet=ascii_lowercase, max_length=6):
