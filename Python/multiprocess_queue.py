@@ -92,3 +92,7 @@ def main(args):
         Worker(queue_in, queue_out, args.hash_value)
         for _ in range(args.num_workers)
     ]
+
+    for worker in workers:
+        worker.start()
+
