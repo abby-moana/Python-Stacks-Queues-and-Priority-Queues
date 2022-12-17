@@ -98,3 +98,5 @@ def main(args):
 
     for text_length in range(1, args.max_length + 1):
         combinations = Combinations(ascii_lowercase, text_length)
+        for indices in chunk_indices(len(combinations), len(workers)):
+            queue_in.put(Job(combinations, *indices))
