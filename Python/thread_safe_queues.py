@@ -64,3 +64,4 @@ class Worker(threading.Thread):
     def state(self):
         if self.working:
             return f"{self.product} ({self.progress}%)"
+        return ":zzz: Idle"
