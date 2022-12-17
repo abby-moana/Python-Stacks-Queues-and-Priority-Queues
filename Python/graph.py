@@ -92,3 +92,7 @@ def depth_first_traverse(graph, source, order_by=None):
     stack = Stack(source)
     visited = set()
     while stack:
+        if (node := stack.dequeue()) not in visited:
+            yield node
+            visited.add(node)
+            neighbors = list(graph.neighbors(node))
