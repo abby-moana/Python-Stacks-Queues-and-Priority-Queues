@@ -35,3 +35,5 @@ if __name__ == "__main__":
 
 async def fetch_html(session, url):
     async with session.get(url) as response:
+        if response.ok and response.content_type == "text/html":
+            return await response.text()
