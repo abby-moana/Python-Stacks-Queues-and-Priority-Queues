@@ -2,6 +2,7 @@ from typing import NamedTuple
 import network as nx
 from queues import Queue
 from collections import deque
+from queues import Queue, Stack
 
 
 class City(NamedTuple):
@@ -85,3 +86,6 @@ def retrace(previous, source, destination):
 
 def connected(graph, source, destination):
     return shortest_path(graph, source, destination) is not None
+
+
+def
