@@ -73,3 +73,6 @@ def retrace(previous, source, destination):
     path = deque()
 
     current = destination
+    while current!= source:
+        path.appendleft(current)
+        current = previous.get(current)
