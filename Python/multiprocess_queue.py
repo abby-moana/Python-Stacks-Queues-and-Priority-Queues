@@ -76,3 +76,6 @@ class Job:
     stop_index: int
 
     def __call__(self, hash_value):
+        for index in range(self.start_index, self.stop_index):
+            text_bytes = self.combinations[index].encode("utf-8")
+            hashed = md5(text_bytes).hexdigest()
