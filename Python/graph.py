@@ -69,3 +69,7 @@ def shortest_path(graph, source, destination, order_by=None):
                     return retrace(previous, source, destination)
 
 
+def retrace(previous, source, destination):
+    path = deque()
+
+    current = destination
