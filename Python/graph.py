@@ -1,4 +1,6 @@
 from typing import NamedTuple
+import network as nx
+
 
 class City(NamedTuple):
     name: str
