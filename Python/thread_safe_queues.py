@@ -24,4 +24,7 @@ def parse_args():
 
 
 if __name__ == "__main__":
-    try
+    try:
+        main(parse_args())
+    except KeyboardInterrupt:
+        pass
