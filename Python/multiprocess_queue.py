@@ -35,3 +35,7 @@ def chunk_indices(length, num_chunks):
 
 class Combinations:
     def __init__(self, alphabet, length):
+        self.alphabet = alphabet
+        self.length = length
+
+
