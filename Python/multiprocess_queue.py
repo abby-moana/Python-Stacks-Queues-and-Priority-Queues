@@ -74,3 +74,5 @@ class Job:
     combinations: Combinations
     start_index: int
     stop_index: int
+
+    def __call__(self, hash_value):
