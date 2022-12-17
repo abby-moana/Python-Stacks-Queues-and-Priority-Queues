@@ -82,3 +82,13 @@ class Job:
             hashed = md5(text_bytes).hexdigest()
             if hashed == hash_value:
                 return text_bytes.decode("utf-8")
+
+
+def main(args):
+    queue_in = multiprocessing.Queue()
+    queue_out = multiprocessing.Queue()
+
+    workers = [
+        Worker(queue_in, queue_out, args.hash_value)
+        for _ in range(args.num_workers)
+    ]
