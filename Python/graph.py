@@ -88,15 +88,20 @@ def connected(graph, source, destination):
     return shortest_path(graph, source, destination) is not None
 
 
-def depth_first_traverse(graph, source, order_by=None):
-    stack = Stack(source)
+def recursive_depth_first_traverse(graph, source, order_by=None):
     visited = set()
-    while stack:
-        if (node := stack.dequeue()) not in visited:
-            yield node
-            visited.add(node)
-            neighbors = list(graph.neighbors(node))
-            if order_by:
-                neighbors.sort(key=order_by)
-            for neighbor in reversed(neighbors):
-                stack.enqueue(neighbor)
+
+    def visited(node):
+
+        yield node
+        visited.add(node)
+        neighbors = list(graph.neighbors(node))
+        if order_by:
+            neighbors.sort(key=order_by)
+        for neighbor in reversed(neighbors):
+            if neighbor not in visited:
+                yield from visit(neighbor)
+
+    return visit(source)
+
+
