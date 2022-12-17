@@ -123,3 +123,5 @@ class View:
             left_panel = self.panel(producer, f"Producer {i}")
             right_panel = self.panel(consumer, f"Consumer {i}")
             rows.append(Columns([left_panel, right_panel], width=40))
+        return Group(*rows)
+
