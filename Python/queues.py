@@ -60,3 +60,5 @@ class MutableMinHeap(IterableMixin):
         self._elements = []
         self._counter = count()
 
+    def __setitem__(self, unique_value, priority):
+        if
