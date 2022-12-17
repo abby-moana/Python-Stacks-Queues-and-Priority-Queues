@@ -27,5 +27,11 @@ def chunk_indices(length, num_chunks):
     start = 0
     while num_chunks > 0:
         num_chunks = min(num_chunks, length)
-        chunk_size = round(length / num num_chunks)
+        chunk_size = round(length / num_chunks)
         yield start, (start := start + chunk_size)
+        length -= chunk_size
+        num_chunks -= 1
+
+
+class Combinations:
+    def __init__(self, alphabet, length):
