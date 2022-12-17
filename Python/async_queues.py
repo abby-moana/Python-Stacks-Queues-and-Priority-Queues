@@ -34,7 +34,9 @@ async def main(args):
         for task in tasks:
             task.cancel()
 
-        await
+        await asyncio.gather(*tasks, return_exceptions=True)
+
+
     finally:
         await session.close()
 
