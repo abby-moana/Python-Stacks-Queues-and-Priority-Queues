@@ -54,3 +54,14 @@ class Job(NamedTuple):
     url: str
     depth: int = 1
 
+
+async def worker(worker_id, session, queue, links, max_depth):
+    print(f"[{worker_id} starting]", file=sys.stderr)
+    while True:
+        url, depth = await queue.get()
+        links[url] += 1
+        try:
+            if depth <= max_depth:
+                print(f"[{worker_id} {depth=} {url=}]", file=sys.stderr)
+                if html := await fetch_html(session, url):
+                    for
