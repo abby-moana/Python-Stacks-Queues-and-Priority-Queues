@@ -60,3 +60,7 @@ def shortest_path(graph, source, destination, order_by=None):
         if order_by:
             neighbors.sort(key=order_by)
         for neighbor in neighbors:
+            if neighbor not in visited:
+                visited.add(neighbor)
+                queue.enqueue(neighbor)
+                previous[neighbor] = node
