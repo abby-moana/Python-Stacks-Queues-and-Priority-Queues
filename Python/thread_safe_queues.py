@@ -60,7 +60,7 @@ class Worker(threading.Thread):
         self.working = False
         self.progress = 0
 
-
     @property
     def state(self):
-
+        if self.working:
+            return f"{self.product} ({self.progress}%)"
