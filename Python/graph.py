@@ -127,5 +127,8 @@ def dijkstra_shortest_path(graph, source, destination, weight_factory):
     while unvisited:
         visited.add(node := unvisited.dequeue())
         for neighbor, weights in graph[node].items():
+            if neighbor not in visited:
+                weight = weight_factory(weights)
+                new_distance = unvisited[node] + weight
 
 
