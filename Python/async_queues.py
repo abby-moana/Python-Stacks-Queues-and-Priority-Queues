@@ -4,6 +4,9 @@ from collections import Counter
 
 import aiohttp
 
+from urllib.parse import urljoin
+
+
 
 async def main(args):
     session = aiohttp.ClientSession()
@@ -25,5 +28,6 @@ def display(links):
     for url, count in links.most_common():
         print(f"{count:>3} {url}")
 
-if __name__ == "__main__";
+
+if __name__ == "__main__":
     asyncio.run(main(parse_args()))
