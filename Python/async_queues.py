@@ -64,4 +64,6 @@ async def worker(worker_id, session, queue, links, max_depth):
             if depth <= max_depth:
                 print(f"[{worker_id} {depth=} {url=}]", file=sys.stderr)
                 if html := await fetch_html(session, url):
-                    for
+                    for link_url in parse_links(url, html):
+                    await queue.put(Job(link_url, depth + 1))
+
