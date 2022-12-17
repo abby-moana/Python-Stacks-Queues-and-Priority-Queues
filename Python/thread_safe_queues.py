@@ -175,3 +175,9 @@ class Consumer(Worker):
             self.simulate_work()
             self.buffer.task_done()
             self.simulate_idle()
+
+
+@dataclass(order=True)
+class Product:
+    priority: int
+    label: str = field(compare=False)
