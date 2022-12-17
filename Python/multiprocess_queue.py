@@ -96,3 +96,5 @@ def main(args):
     for worker in workers:
         worker.start()
 
+    for text_length in range(1, args.max_length + 1):
+        combinations = Combinations(ascii_lowercase, text_length)
