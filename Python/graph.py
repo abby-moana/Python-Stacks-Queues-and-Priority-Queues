@@ -81,3 +81,6 @@ def retrace(previous, source, destination):
 
     path.appendleft(source)
     return list(path)
+
+
+def connected(graph, source, destination):
