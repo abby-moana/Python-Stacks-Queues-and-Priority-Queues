@@ -130,5 +130,8 @@ def parse_args():
     )
     return parser.parse_args()
 
+
 if __name__ == "__main__":
     main(parse_args())
+
+POISON_PILL = None
