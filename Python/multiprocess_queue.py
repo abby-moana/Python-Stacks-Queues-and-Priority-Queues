@@ -61,5 +61,7 @@ class Worker(multiprocessing.Process):
         self.hash_value = hash_value
 
     def run(self):
+        while True:
+            job = self.queue_in.get()
 
 
