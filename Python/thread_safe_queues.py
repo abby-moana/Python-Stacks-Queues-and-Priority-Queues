@@ -88,3 +88,9 @@ class Worker(threading.Thread):
 
 
 class View:
+    def __init__(self, buffer, producers, consumers):
+        self.buffer = buffer
+        self.producers = producers
+        self.consumers = consumers
+
+    def animate(self):
