@@ -1,5 +1,6 @@
 from typing import NamedTuple
 import network as nx
+from queues import Queue
 
 
 class City(NamedTuple):
@@ -30,3 +31,5 @@ def load_graph(filename, node_factory):
         (nodes[name1], nodes[name2], weights)
         for name1, name2, weights in graph.edges(data=True)
     )
+
+
