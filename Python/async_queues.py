@@ -36,6 +36,7 @@ async def main(args):
 
         await asyncio.gather(*tasks, return_exceptions=True)
 
+        display(links)
 
     finally:
         await session.close()
