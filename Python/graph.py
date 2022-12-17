@@ -57,3 +57,5 @@ def shortest_path(graph, source, destination, order_by=None):
     while queue:
         node = queue.dequeue()
         neighbors = list(graph.neighbors(node))
+        if order_by:
+            neighbors.sort(key=order_by)
