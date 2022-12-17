@@ -134,3 +134,4 @@ def dijkstra_shortest_path(graph, source, destination, weight_factory):
                     unvisited[neighbor] = new_distance
                     previous[neighbor] = node
 
+    return retrace(previous, source, destination)
