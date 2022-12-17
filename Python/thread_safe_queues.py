@@ -142,3 +142,5 @@ class Producer(Worker):
         super().__init__(speed, buffer)
         self.products = products
 
+    def run(self):
+        while True:
