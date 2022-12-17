@@ -7,3 +7,7 @@ import aiohttp
 
 async def main(args):
     session = aiohttp.ClientSession()
+    try:
+        links = Counter()
+    finally:
+        await session.close()
