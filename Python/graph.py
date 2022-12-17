@@ -124,3 +124,6 @@ def dijkstra_shortest_path(graph, source, destination, weight_factory):
         unvisited[node] = infinity
     unvisited[source] = 0
 
+    while unvisited:
+        visited.add(node := unvisited.dequeue())
+
