@@ -112,6 +112,10 @@ def main(args):
                 t2 = time.perf_counter()
                 print(f"{solution} (found in {t2 - t1:.1f}s)")
                 break
+        except queue.Empty:
+            pass
+    else:
+        print("Unable to find a solution")
 
 
 def parse_args():
