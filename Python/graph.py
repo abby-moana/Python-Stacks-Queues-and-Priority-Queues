@@ -120,4 +120,7 @@ def dijkstra_shortest_path(graph, source, destination, weight_factory):
     visited = set()
 
     unvisited = MutableMinHeap()
-    for
+    for node in graph.nodes:
+        unvisited[node] = infinity
+    unvisited[source] = 0
+
