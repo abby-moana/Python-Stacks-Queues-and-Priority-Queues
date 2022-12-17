@@ -152,3 +152,8 @@ class Producer(Worker):
 
 class Consumer(Worker):
     def run(self):
+        while True:
+            self.product = self.buffer.get()
+            self.simulate_work()
+            self.buffer.task_done()
+            self.simulate_idle()
