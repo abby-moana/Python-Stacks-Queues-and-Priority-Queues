@@ -4,6 +4,7 @@ import threading
 from random import randint
 from time import sleep
 from itertools import zip_longest
+from rich.align import Align
 
 
 
