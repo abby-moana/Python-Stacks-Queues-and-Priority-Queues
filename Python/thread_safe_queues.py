@@ -9,6 +9,7 @@ from rich.columns import Columns
 from rich.console import Group
 from rich.live import Live
 from rich.panel import Panel
+from random import choice, randint
 
 
 QUEUE_TYPES = {
