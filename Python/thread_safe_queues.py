@@ -98,3 +98,4 @@ class View:
             self.render(), screen=True, refresh_per_second=10
         ) as live:
             while True:
+                live.update(self.render())
