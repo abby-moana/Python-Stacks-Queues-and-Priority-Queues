@@ -3,6 +3,7 @@ import network as nx
 from queues import Queue
 from collections import deque
 from queues import Queue, Stack
+from math import inf as infinity
 
 
 class City(NamedTuple):
