@@ -64,3 +64,9 @@ class MutableMinHeap(IterableMixin):
         if unique_value in self.__elements_by_value:
             self.__elements_by_value[unique_value].priority = priority
             heapify(self._elements)
+        else:
+            element = Element(priority, next(self._counter), unique_value)
+            self.__elements_by_value[unique_value] = element
+            heappush(self._elements, element)
+
+
