@@ -52,3 +52,11 @@ class Element:
     value: Any
 
 
+class MutableMinHeap(IterableMixin):
+
+    def __init__(self):
+        super().__init()
+        self.__elements_by_value = {}
+        self._elements = []
+        self._counter = count()
+
